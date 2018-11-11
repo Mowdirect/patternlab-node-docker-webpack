@@ -1,0 +1,58 @@
+{
+    "name": "@pattern-lab/edition-node-gulp",
+    "version": "2.0.0-beta.0",
+    "description": "The gulp wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.",
+    "keywords": [
+        "Atomic Web Design",
+        "Gulp",
+        "Javascript",
+        "Node",
+        "Pattern Lab"
+    ],
+    "bugs": "https://github.com/pattern-lab/patternlab-node/issues",
+    "repository": "https://github.com/pattern-lab/patternlab-node/tree/master/packages/edition-node-gulp",
+    "license": "MIT",
+    "author": "Brian Muenzenmeyer",
+    "main": "gulpfile.js",
+    "scripts": {
+        "dev": "yarn patternlab:serve",
+        "patternlab": "node ./patternlab.js",
+        "patternlab:build": "webpack --mode=production --env.production",
+        "patternlab:help": "node ./patternlab.js help",
+        "patternlab:installplugin": "node ./patternlab.js installplugin",
+        "patternlab:liststarterkits": "node ./patternlab.js liststarterkits",
+        "patternlab:loadstarterkit": "node ./patternlab.js loadstarterkit",
+        "patternlab:patternsonly": "node ./patternlab.js patternsonly",
+        "patternlab:serve": "node_modules/.bin/webpack-dev-server --host 0.0.0.0 --mode=development --env.development",
+        "patternlab:version": "node ./patternlab.js version"
+    },
+    "dependencies": {
+        "@pattern-lab/cli": "^0.0.1-beta.0",
+        "@pattern-lab/core": "^3.0.0-beta.0",
+        "@pattern-lab/engine-mustache": "^2.0.0-beta.0",
+        "@pattern-lab/uikit-workshop": "^1.0.0-beta.0",
+        "babel-cli": "6.26.0",
+        "babel-core": "6.26.3",
+        "babel-loader": "8.0.4",
+        "babel-polyfill": "6.26.0",
+        "babel-preset-env": "1.7.0",
+        "babel-register": "6.26.0",
+        "copy-webpack-plugin": "4.6.0",
+        "event-hooks-webpack-plugin": "2.1.1",
+        "globby": "8.0.1",
+        "uglifyjs-webpack-plugin": "2.0.1",
+        "webpack": "4.25.1",
+        "webpack-config-utils": "2.3.1",
+        "webpack-merge": "4.1.4"
+    },
+    "devDependencies": {
+        "webpack-cli": "3.1.2",
+        "webpack-dev-server": "3.1.10"
+    },
+    "engines": {
+        "node": ">=10.0"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}

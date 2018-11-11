@@ -1,0 +1,7 @@
+{
+  "name": "patternlab-node-webpack",
+  "version": "1.0.0",
+  "description": "patternlab node webpack docker",
+  "author": "Jaroslaw Jegorow",
+  "license": "MIT"
+}

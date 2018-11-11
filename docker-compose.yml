@@ -1,0 +1,23 @@
+# docker-compose build app
+# docker-compose -f docker-compose.yml up
+# docker-compose up app
+
+# docker-compose down
+# docker system prune -a
+
+version: "3"
+
+services:
+    app:
+        container_name: app
+        build:
+            context: ./app
+            dockerfile: Dockerfile
+        volumes:
+            - ./app/:/usr/src/app
+            - /usr/src/app/node_modules/
+        ports:
+            - "8000:8000"
+        environment:
+            - NODE_ENV=development
+        command: yarn run dev
